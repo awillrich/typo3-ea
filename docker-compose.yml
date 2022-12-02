@@ -19,6 +19,7 @@ version: "3"
 services:
   typo3:
     build: .
+    restart: always
     ports:
       - "80:80"
     volumes:
@@ -29,6 +30,7 @@ services:
       - backend
   database:
     image: mariadb:10.8
+    restart: always
     command:
       [
         "mysqld",
@@ -40,6 +42,20 @@ services:
       - "MYSQL_PASSWORD=password"
       - "MYSQL_DATABASE=typo3"
       - "MYSQL_ROOT_PASSWORD=example"
+    networks:
+      - backend
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    links:
+      - database
+    environment:
+      PMA_HOST: database
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8080:80
     networks:
       - backend
 volumes:
