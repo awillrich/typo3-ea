@@ -38,10 +38,10 @@ services:
         "--collation-server=utf8mb4_unicode_ci",
       ]
     environment:
-      - "MYSQL_USER=typo3"
-      - "MYSQL_PASSWORD=password"
-      - "MYSQL_DATABASE=typo3"
-      - "MYSQL_ROOT_PASSWORD=example"
+      - "MYSQL_USER=${MYSQL_USER}"
+      - "MYSQL_PASSWORD=${MYSQL_PASSWORD}"
+      - "MYSQL_DATABASE=${MYSQL_DATABASE}"
+      - "MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}"
     networks:
       - backend
   phpmyadmin:
