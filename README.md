@@ -1,4 +1,5 @@
 # typo3-base
+
 Base for Typo3 V11 projects
 
 ## Commands
@@ -13,8 +14,9 @@ Container beenden: `docker-compose down`
 - PhpMyAdmin: http://localhost:8080/
 
 ## env
-Required values (example in .env.example):
+
+Required values (example in .env):
 `MYSQL_USER`  
 `MYSQL_PASSWORD`  
 `MYSQL_DATABASE`  
-`MYSQL_ROOT_PASSWORD`  
+`MYSQL_ROOT_PASSWORD`
