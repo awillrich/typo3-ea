@@ -1,6 +1,6 @@
-# typo3-base
+# typo3-ea
 
-Base for Typo3 V11 projects
+Übungsprojekt
 
 ## Commands
 
@@ -12,11 +12,3 @@ Container beenden: `docker-compose down`
 - Frontend: http://localhost/
 - Backend: http://localhost/typo3
 - PhpMyAdmin: http://localhost:8080/
-
-## env
-
-Required values (example in .env):
-`MYSQL_USER`  
-`MYSQL_PASSWORD`  
-`MYSQL_DATABASE`  
-`MYSQL_ROOT_PASSWORD`
